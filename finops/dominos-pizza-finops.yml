@@ -1,5 +1,6 @@
 specification: FinOps Framework
 specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
 alignedWith:
   framework: FinOps Foundation Framework
   frameworkUrl: https://www.finops.org/framework/
@@ -8,123 +9,61 @@ alignedWith:
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 provider: Domino's Pizza
 providerId: dominos-pizza
-publisherName: Domino's Pizza
-serviceCategory: API
+publisherName: Domino's Pizza, LLC
+serviceCategory: QSR / Food Ordering
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
   - Food Service
   - Restaurants
   - QSR
   - FinOps
-  - Cost Management
   - FOCUS
-description: FinOps framework definition for the Domino's Pizza API surface. Provides a FOCUS-aligned
-  mapping for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
-principles:
-  - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
-  - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
-  - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
-  - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
-domains:
-  - name: Understand Usage and Cost
-    capabilities:
-      - Data Ingestion
-      - Allocation
-      - Reporting and Analytics
-      - Anomaly Management
-  - name: Quantify Business Value
-    capabilities:
-      - Planning and Estimating
-      - Forecasting
-      - Budgeting
-      - Benchmarking
-      - Unit Economics
-  - name: Optimize Usage and Cost
-    capabilities:
-      - Architecting for Cloud
-      - Rate Optimization
-      - Workload Optimization
-      - Cloud Sustainability
-      - Licensing and SaaS
-  - name: Manage the FinOps Practice
-    capabilities:
-      - FinOps Practice Operations
-      - FinOps Education and Enablement
-      - Invoicing and Chargeback
-      - Onboarding Workloads
-      - Intersecting Disciplines
+description: FOCUS-aligned FinOps shape for Domino's. Domino's does not invoice for API consumption (the
+  endpoints are undocumented and not commercial), so FinOps cost falls on the consumer's integration platform.
+notes: No commercial billing relationship; reconciled=false. The actual billable transaction is the pizza
+  order itself, settled to the customer's payment method.
+sources:
+  - https://github.com/RIAEvangelist/node-dominos-pizza-api
 billingModel:
-  pricingCategory: Usage-Based
-  billingFrequency: Monthly
+  pricingCategory: Not Applicable (No Public API)
+  billingFrequency: Not Applicable
   billingCurrency: USD
-  chargeCategories:
-    - Usage
-    - Purchase
-    - Tax
-    - Credit
-    - Adjustment
-  chargeFrequency: Recurring
+  chargeCategories: []
 focusColumns:
-  ServiceName: Domino's Pizza
-  ServiceCategory: Developer Tools / API
+  ServiceName: Domino's Pizza (Unofficial)
+  ServiceCategory: QSR / Food Ordering
   ProviderName: Domino's Pizza
-  PublisherName: Domino's Pizza
-  InvoiceIssuerName: Domino's Pizza
-  PricingCategory: Usage-Based
-  PricingUnit: request
+  PublisherName: Domino's Pizza, LLC
+  InvoiceIssuerName: Not Applicable
   BillingCurrency: USD
-  ChargeCategory: Usage
 meters:
   - name: api_requests
-    description: Count of billable API requests
+    description: Internal observability of calls against undocumented Domino's endpoints
     unit: request
     aggregation: sum
     dimensions:
-      - api
       - endpoint
-      - tier
-      - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
-    aggregation: sum
+  - name: orders_placed
+    description: Real-world pizza orders triggered via the integration
+    unit: order
+    aggregation: count
     dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
-    aggregation: sum
-    dimensions:
-      - api
-      - endpoint
-      - tier
-apis:
-  - name: Domino's Pizza API
-    baseURL: https://api.dominos.com
-    tags:
-      - Food Service
-      - Restaurants
-      - QSR
-    serviceName: Domino's Pizza API
-    serviceCategory: API
-unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
-    target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
-    target: TBD
+      - store_id
+principles:
+  - name: Visibility
+    description: Track endpoint calls and order placements in the consumer's logs; Domino's does not produce
+      a usage invoice.
+  - name: Allocation
+    description: Allocate integration cost to the consuming product/feature (e.g. voice-ordering bot,
+      kiosk).
+  - name: Optimization
+    description: Cache store and menu lookups; minimise polling against undocumented endpoints to reduce
+      throttling risk.
+  - name: Accountability
+    description: Integration owner is accountable for monitoring breakage; there is no official Domino's
+      developer relationship.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
