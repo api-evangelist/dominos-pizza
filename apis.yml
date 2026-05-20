@@ -28,6 +28,10 @@ apis:
     description: >-
       The Domino's Pizza API provides access to platform services and data for enterprise integration and automation.
 common:
+  - type: GitHubOrganization
+    url: https://github.com/dominos-pizza
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/dominos-pizza-inc
   - type: Website
     url: https://www.dominos.com
 maintainers:
