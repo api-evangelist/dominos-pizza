@@ -7,33 +7,51 @@ tags:
   - Food Service
   - Restaurants
   - QSR
+  - Online Ordering
 description: >-
-  Domino's Pizza is a major US corporation and Fortune 1000 company. The Domino's Pizza API provides programmatic access to its platform services, data, and integrations for enterprise customers and partners.
+  Domino's Pizza is a major US quick-service restaurant corporation and Fortune
+  1000 company. Domino's does NOT publish an official public developer API or a
+  developer portal. Its digital ordering surface is delivered through consumer
+  channels - the dominos.com website, the Domino's mobile apps, and the
+  "AnyWare" ordering platform (text, voice, smart TV, Amazon Echo, Google Home,
+  and more), including the "Dom" virtual voice ordering assistant. The
+  undocumented HTTP endpoints behind these first-party apps have been
+  reverse-engineered by the developer community into well-known UNOFFICIAL
+  wrapper libraries (the npm "dominos" / node-dominos-pizza-api package and the
+  Python "pizzapi" / "dominos" packages). These community libraries are not
+  endorsed, supported, or warranted by Domino's. Domino's does expose APIs to
+  select delivery-marketplace partners (e.g. Uber Eats, Just Eat) through direct
+  partnership and a private Postman workspace, but these are not publicly
+  available. No official API specification, pricing, or rate-limit policy is
+  published.
 created: '2026-04-19'
-modified: '2026-04-19'
+modified: '2026-06-02'
 specificationVersion: '0.19'
-apis:
-  - aid: dominos-pizza:dominos-pizza-api
-    name: Domino's Pizza API
-    tags:
-      - Food Service
-      - Restaurants
-      - QSR
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-    baseURL: https://api.dominos.com
-    humanURL: https://developer.dominos.com
-    properties:
-      - url: https://developer.dominos.com/docs
-        type: Documentation
-    description: >-
-      The Domino's Pizza API provides access to platform services and data for enterprise integration and automation.
 common:
+  - type: Website
+    url: https://www.dominos.com
+  - type: Portal
+    title: Domino's AnyWare Ordering Platform
+    url: https://anyware.dominos.com/
+  - type: Blog
+    title: Domino's Engineering / Tech Blog (UK)
+    url: https://tech.dominos.co.uk/
   - type: GitHubOrganization
     url: https://github.com/dominos-pizza
   - type: LinkedIn
     url: https://www.linkedin.com/company/dominos-pizza-inc
-  - type: Website
-    url: https://www.dominos.com
+  - type: CodeExamples
+    title: node-dominos-pizza-api (Unofficial Community Wrapper)
+    url: https://github.com/RIAEvangelist/node-dominos-pizza-api
+  - type: SDK
+    title: dominos (Unofficial Node.js Community Library)
+    url: https://www.npmjs.com/package/dominos
+  - type: CodeExamples
+    title: pizzapi (Unofficial Python Community Wrapper)
+    url: https://github.com/ggrammar/pizzapi
+  - type: SDK
+    title: dominos (Unofficial Python Community Library)
+    url: https://pypi.org/project/dominos/
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
