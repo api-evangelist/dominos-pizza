@@ -43,13 +43,13 @@ common:
   - type: CodeExamples
     title: node-dominos-pizza-api (Unofficial Community Wrapper)
     url: https://github.com/RIAEvangelist/node-dominos-pizza-api
-  - type: SDK
+  - type: SDKs
     title: dominos (Unofficial Node.js Community Library)
     url: https://www.npmjs.com/package/dominos
   - type: CodeExamples
     title: pizzapi (Unofficial Python Community Wrapper)
     url: https://github.com/ggrammar/pizzapi
-  - type: SDK
+  - type: SDKs
     title: dominos (Unofficial Python Community Library)
     url: https://pypi.org/project/dominos/
 maintainers:
