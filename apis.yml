@@ -28,6 +28,8 @@ created: '2026-04-19'
 modified: '2026-06-02'
 specificationVersion: '0.19'
 common:
+  - type: DomainSecurity
+    url: security/dominos-pizza-domain-security.yml
   - type: Website
     url: https://www.dominos.com
   - type: Portal
