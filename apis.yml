@@ -56,6 +56,12 @@ created: '2026-04-19'
 modified: '2026-06-02'
 specificationVersion: '0.23'
 common:
+  - type: Plans
+    url: plans/dominos-pizza-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/dominos-pizza-rate-limits.yml
+  - type: FinOps
+    url: finops/dominos-pizza-finops.yml
   - type: DomainSecurity
     url: security/dominos-pizza-domain-security.yml
   - type: Website
