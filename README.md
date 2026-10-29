@@ -1,4 +1,4 @@
-# Domino's Pizza (dominos-pizza)
+# Domino's Pizza
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,41 +66,97 @@
 
 Domino's Pizza is a major US quick-service restaurant corporation and Fortune 1000 company. Domino's does NOT publish an official public developer API or a developer portal. Its digital ordering surface is delivered through consumer channels - the dominos.com website, the Domino's mobile apps, and the "AnyWare" ordering platform (text, voice, smart TV, Amazon Echo, Google Home, and more), including the "Dom" virtual voice ordering assistant. The undocumented HTTP endpoints behind these first-party apps have been reverse-engineered by the developer community into well-known UNOFFICIAL wrapper libraries (the npm "dominos" / node-dominos-pizza-api package and the Python "pizzapi" / "dominos" packages). These community libraries are not endorsed, supported, or warranted by Domino's. Domino's does expose APIs to select delivery-marketplace partners (e.g. Uber Eats, Just Eat) through direct partnership and a private Postman workspace, but these are not publicly available. No official API specification, pricing, or rate-limit policy is published.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/dominos-pizza/refs/heads/main/apis.yml)
+**Areas:** Food Service · Restaurant · Quick Service Restaurant · Online Ordering
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Domino's Pizza on APIs.io
 
-## Tags:
+Everything profiled for Domino's Pizza is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/dominos-pizza/](https://apis.io/providers/dominos-pizza/)** — or go straight to one of the APIs or properties below.
 
- - Food Service, Restaurants, QSR, Online Ordering
+### Published properties
 
-## Timestamps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **Created:** 2026-04-19
-- **Modified:** 2026-06-02
+#### Security (1)
 
-## Common Properties
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Dominos Pizza Domain Security](https://apis.io/security/dominos-pizza/dominos-pizza-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Dominos Pizza Plans Pricing](https://apis.io/plans/dominos-pizza/dominos-pizza-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Dominos Pizza Rate Limits](https://apis.io/rate-limits/dominos-pizza/dominos-pizza-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Dominos Pizza Finops](https://apis.io/finops/dominos-pizza/dominos-pizza-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.dominos.com)
-- [Domino's AnyWare Ordering Platform](https://anyware.dominos.com/)
-- [Domino's Engineering / Tech Blog (UK)](https://tech.dominos.co.uk/)
-- [GitHubOrganization](https://github.com/dominos-pizza)
-- [LinkedIn](https://www.linkedin.com/company/dominos-pizza-inc)
-- [node-dominos-pizza-api (Unofficial Community Wrapper)](https://github.com/RIAEvangelist/node-dominos-pizza-api)
-- [dominos (Unofficial Node.js Community Library)](https://www.npmjs.com/package/dominos)
-- [pizzapi (Unofficial Python Community Wrapper)](https://github.com/ggrammar/pizzapi)
-- [dominos (Unofficial Python Community Library)](https://pypi.org/project/dominos/)
+- [Blog](https://tech.dominos.co.uk/)
+- [GitHub](https://github.com/dominos-pizza)
 
-## Commercial Profile
+## API Evangelist rating
 
-> Note: Domino's has no official public API. The files below document the *absence* of a commercial API surface and the unofficial community-discovered access, with `reconciled: false`. No artifacts (OpenAPI, AsyncAPI, JSON Schema, capabilities, vocabulary) are generated because there is no official API to describe.
+**Kin Score 10.1** — minimal · rubric 0.24.0 · scored 2026-10-17
 
-- [Plans & Pricing](plans/dominos-pizza-plans-pricing.yml) — API Commons Plans 0.1 (no commercial plans; unofficial access only)
-- [Rate Limits](rate-limits/dominos-pizza-rate-limits.yml) — API Commons Rate Limits 0.1 (no published limits)
-- [FinOps](finops/dominos-pizza-finops.yml) — FinOps Framework / FOCUS alignment (no API billing relationship)
+| Facet | Score |
+|---|---|
+| Discoverability | 39.3 |
+| Contract quality | 6.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 5.3 |
 
-## Maintainers
+**Agent readiness 1.9** — human-only
 
-**FN:** Kin Lane
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-**Email:** kin@apievangelist.com
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/dominos-pizza/](https://apis.io/providers/dominos-pizza/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Domino's Pizza: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/dominos-pizza/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
